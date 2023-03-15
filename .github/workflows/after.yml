@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "${{ toJSON(github.event.workflow_run.conclusion) }}"
-          echo "${{ toJSON(github.repository_owner) }}"
-          echo "${{ toJSON(github.ref) }}"
+          echo ${{ github.event.workflow_run.conclusion }}
+          echo ${{ github.repository_owner }}
+          echo ${{ github.ref }}
