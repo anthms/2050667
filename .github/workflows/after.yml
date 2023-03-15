@@ -7,9 +7,8 @@ on:
 jobs:
   job-name:
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success' && github.repository_owner == 'anthms' && startsWith(github.ref, 'refs/heads/')
     steps:
       - run: |
-          echo "${{ toJSON(github.event.workflow_run) }}"
+          echo "${{ toJSON(github.event.workflow_run.conclusion) }}"
           echo "${{ toJSON(github.repository_owner) }}"
           echo "${{ toJSON(github.ref) }}"
