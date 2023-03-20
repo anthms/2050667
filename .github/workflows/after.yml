@@ -7,7 +7,7 @@ on:
 jobs:
   job-name:
     runs-on: ubuntu-latest
-    if: >
+    if: |
       github.event.workflow_run.conclusion == 'success' &&
       github.repository_owner == 'anthms' &&
       startsWith(github.ref, 'refs/heads/') &&
