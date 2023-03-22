@@ -10,7 +10,7 @@ jobs:
     if: |
       github.event.workflow_run.conclusion == 'success' &&
       github.repository_owner == 'anthms' &&
-      startsWith(github.ref, 'refs/heads/') &&
+      startsWith(github.ref, 'refs/heads/')
     steps:
       - run: |
           echo ${{ github.event.workflow_run.conclusion }}
